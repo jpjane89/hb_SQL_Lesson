@@ -1,0 +1,12 @@
+<html>
+<body>
+<h1>Project: {{ project_title }}</h1>
+
+<p>Grades</p>
+<ul>
+    {% for student in students %}
+    <li>Student: {{ student[0] }} {{ student[1] }} Grade: {{ student[3] }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
