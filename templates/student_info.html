@@ -1,13 +1,25 @@
 <html>
-<body>
-<h1>Student: {{ first_name }} {{ last_name }}</h1>
-<h2>Github account: {{ github }}</h2>  
+<style>
+    h2,h3,h4,h5 {font-family:Arial;
+                }
 
-<p>Grades</p>
-<ul>
-    {% for project in projects %}
-    <li>Project: <a href="/project?project={{project[1]}}"> {{ project[1] }}</a>  Grade: {{ project[2] }}</li>
-{% endfor %}
-</ul>
+    p#instruction {font-family:Arial;
+                   font-style:italic;
+                   font-size:14px;
+                  }
+</style>
+<body>
+    <div>
+        <h2>Student: {{ first_name }} {{ last_name }}</h2>
+        <h3>Github account: {{ github }}</h3>
+    </div>
+    <div><h4>Project Grades:</h4>
+        <ul>
+            {% for project in projects %}
+            <li><a href="/project?project={{project[1]}}"> {{ project[1] }}</a>  Grade: {{ project[2] }}</li>
+            {% endfor %}
+        </ul>
+        <p id= "instruction">(Click to see other students' grades)</p>
+    </div>
 </body>
 </html>

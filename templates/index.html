@@ -1,6 +1,54 @@
 <html>
+<style>
+    h1 {font-family: arial;}
+    h3 {font-family: arial;}
+    label {font-style: italic;}
+</style>
+
 <body>
-    <p><a href="/student">Lookup a student</a></p>
-    <p><a href="/createNewStudent">Add a new student</a></p>
+    <div>
+        <h1>Hackbright Student Hub </h1>
+        <h3>Options: </h3>
+    </div>
+    <div>
+        <ul>
+            <li>Look-up a student</li>
+                <form action="/student">
+                <label for="github">Enter student's github</label>
+                <input type="text" name="github"/>
+                <input type="submit">
+                </form>
+            <li>Add a new student</li> 
+                <form action="/createNewStudent">
+                <label for="first_name">Enter first name</label>
+                <input type="text" name="first_name"/>
+                <label for="last_name">Enter last name</label>
+                <input type="text" name="last_name">
+                <label for="github">Enter github</label>
+                <input type="text" name="github">
+                <input type="submit">
+                </form>
+            <li>Add a new project</li> 
+                <form action="/createNewProject">
+                <label for="title">Enter project title</label>
+                <input type="text" name="title"/>
+                <label for="description">Enter brief description</label>
+                <input type="text" name="description"/>
+                <label for="max_grade">Enter maximum grade</label>
+                <input type="text" name="max_grade">
+                <input type="submit">
+                </form>
+            <li>Give a grade to a student</li> 
+                <form action="/createNewGrade">
+                <label for="github">Enter student's github</label>
+                <input type="text" name="github"/>
+                <label for="project_title">Enter project title</label>
+                <input type="text" name="project_title"/>
+                <label for="grade">Enter grade</label>
+                <input type="text" name="grade">
+                <input type="submit">
+                </form>
+        </ul>
+    </div>
 </body>
 </html>

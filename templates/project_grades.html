@@ -1,12 +1,19 @@
 <html>
 <body>
-<h1>Project: {{ project_title }}</h1>
-
-<p>Grades</p>
-<ul>
-    {% for student in students %}
-    <li>Student: {{ student[0] }} {{ student[1] }} Github: <a href="/student?github={{ student[2] }}"> {{ student[2] }} </a> Grade: {{ student[4] }}</li>
-{% endfor %}
-</ul>
+<style>
+    h2 {font-family: Arial;}
+    ul {font-family: serif;}
+    p#description {font-style: italic;}
+</style>
+<body>
+    <h2>Project: {{ project_title }}</h2>
+    <p id="description"> {{ description }} </p>
+    <div>
+        <ul>
+            {% for student in students %}
+            <li>Student: {{ student[0] }} {{ student[1] }} | Github: <a href="/student?github={{ student[2]}}"> {{ student[2]}} </a> | Grade: {{ student[4] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
